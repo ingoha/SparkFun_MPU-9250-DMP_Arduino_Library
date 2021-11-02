@@ -14,6 +14,7 @@ SparkFun 9DoF Razor IMU M0
 
 Supported Platforms:
 - ATSAMD21 (Arduino Zero, SparkFun SAMD21 Breakouts)
+- ESP32 (WIP)
 ******************************************************************************/
 #ifndef _SPARKFUN_MPU9250_DMP_H_
 #define _SPARKFUN_MPU9250_DMP_H_
@@ -80,6 +81,7 @@ public:
 	float heading;
 	
 	MPU9250_DMP();
+	MPU9250_DMP(TwoWire* wire, uint8_t addr);
 	
 	// begin(void) -- Verifies communication with the MPU-9250 and the AK8963,
 	// and initializes them to the default state:
